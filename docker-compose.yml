@@ -1,0 +1,14 @@
+version: '2'
+services:
+  app:
+    hostname: application
+    image: app
+    #ports:
+    #  - "8080:8080"
+  web:
+    hostname: web
+    build: web
+    ports:
+      - "9080:80"
+    depends_on:
+     - app

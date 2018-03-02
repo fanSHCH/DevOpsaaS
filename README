@@ -1,0 +1,12 @@
+# Project Java With MySQL maven project
+
+## Java Service expose port
+If Java Service need debug or test from remote, please uncomment the docker-compose.yml from
+    image: app
+    #ports:
+    #  - "8080:8080"
+to 
+    image: app
+    ports:
+      - "8080:8080"
+not Java Service can be access during the port 8080 in host ip. a new line could added under the port to add another expose port such as for debugging.
